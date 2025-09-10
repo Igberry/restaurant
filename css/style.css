@@ -219,7 +219,8 @@ body {
 
 /* MENU */
 .menu-section {
-    padding: 1rem 0
+    padding: 1rem 0;
+    margin: 20px;
 }
 
 .menu-header {
@@ -335,6 +336,9 @@ body {
     padding: 1rem 0
 }
 
+.reservation-section h2 {
+    margin: 20px;
+}
 #reservation-form {
     max-width: 720px;
     margin: 1rem auto;
@@ -347,7 +351,11 @@ body {
     gap: 0.75rem
 }
 
-.saved-reservations {
+.saved-reservations h3 {
+    margin: 30px;
+}
+
+#saved-list {
     margin: 30px;
 }
 .row {
