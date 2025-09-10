@@ -505,3 +505,91 @@ textarea {
 a {
     color: inherit;
 }
+
+/* ===== Mobile View Adjustments ===== */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: none;
+      padding: 1rem;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  
+    /* Add a hamburger button */
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 1rem;
+    }
+  
+    /* Hero Slider */
+    .slider {
+      height: 40vh;
+    }
+  
+    /* Menu items stack */
+    .menu-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .menu-item img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Forms */
+    form {
+      width: 90%;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+  
+    /* Gallery */
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Footer */
+    footer {
+      font-size: 0.9rem;
+      padding: 1.2rem;
+    }
+  }
+  
+  /* ===== Smaller Devices (max 480px) ===== */
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .reserve-btn a {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    nav ul {
+      padding: 0.5rem;
+    }
+  
+    .slider {
+      height: 30vh;
+    }
+  }
+  
