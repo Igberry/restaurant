@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant | Reservation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1>Reserve a Table</h1>
+    <form id="reservation-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <input type="number" min="1" max="20" placeholder="Number of People" required>
+        <textarea placeholder="Special Requests"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <footer>
+        <p>© 2025 The Food Place</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
