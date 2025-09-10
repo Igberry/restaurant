@@ -503,13 +503,6 @@ a {
         height: 40vh;
     }
 
-    .saved-reservations h3 {
-        margin: 20px;
-    }
-
-    #saved-list {
-        margin: 20px;
-    }
     /* Menu items stack */
     .menu-item {
         flex-direction: column;
@@ -532,10 +525,6 @@ a {
     }
 
     #about h2 {
-        margin: 20px;
-    }
-
-    #about p {
         margin: 20px;
     }
     /* Gallery */
