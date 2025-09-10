@@ -1,45 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant | Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Food Place — Demo</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet (make sure file exists at css/style.css) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home"><span class="logo">🍽</span><span class="site-name">The Food Place</span></a>
+
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+            <nav id="site-nav" class="site-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#reservation" class="nav-link">Reservation</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
+    <main>
+        <!-- HERO / SLIDER -->
+        <section id="home" class="hero">
+            <div class="slider" id="home-slider" aria-roledescription="carousel">
+                <button class="slider-btn prev" aria-label="Previous">‹</button>
 
-    <section class="slider">
-        <div class="slide active"> <img src="assets/slide1.jpg" alt="Dish 1"> </div>
-        <div class="slide"> <img src="assets/slide2.jpg" alt="Dish 2"> </div>
-        <div class="slide"> <img src="assets/slide3.jpg" alt="Dish 3"> </div>
-    </section>
+                <div class="slides">
+                    <div class="slide"
+                        style="background-image:url('https://images.unsplash.com/photo-1555992336-03a23c24c09b?auto=format&fit=crop&w=1600&q=80')">
+                        <div class="overlay">
+                            <h1>Authentic Flavours, Unforgettable Moments</h1>
+                            <p>Reserve a table and enjoy a culinary experience crafted by our chefs.</p>
+                            <a class="btn" href="#reservation">Reserve a Table</a>
+                        </div>
+                    </div>
 
+                    <div class="slide"
+                        style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80')">
+                        <div class="overlay">
+                            <h1>Fresh Ingredients, Seasonal Menus</h1>
+                            <p>We use locally-sourced ingredients to create dishes with heart.</p>
+                            <a class="btn ghost" href="#menu">View Menu</a>
+                        </div>
+                    </div>
 
-    <section class="reserve-btn">
-        <a href="reservation.html">Reserve a Table</a>
-    </section>
+                    <div class="slide"
+                        style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80')">
+                        <div class="overlay">
+                            <h1>Perfect Ambiance for Every Occasion</h1>
+                            <p>Book private events or come for a relaxed dinner.</p>
+                            <a class="btn" href="#about">Our Story</a>
+                        </div>
+                    </div>
+                </div>
 
+                <button class="slider-btn next" aria-label="Next">›</button>
+                <div class="dots" id="slider-dots" aria-hidden="false"></div>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2025 The Food Place | 123 Street, City | +234 800 123 4567</p>
-        <p>Follow us on social media</p>
+        <!-- HIGHLIGHTS -->
+        <section class="container highlights">
+            <article class="card">
+                <h3>Chef's Specials</h3>
+                <p>Rotating seasonal favorites prepared with care.</p>
+            </article>
+            <article class="card">
+                <h3>Private Events</h3>
+                <p>Customized menus and dedicated service for your event.</p>
+            </article>
+            <article class="card">
+                <h3>Gift Vouchers</h3>
+                <p>Perfect gifts for family and friends.</p>
+            </article>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu" class="container menu-section">
+            <div class="menu-header">
+                <h2>Our Menu</h2>
+                <div class="menu-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="starters">Starters</button>
+                    <button class="filter-btn" data-filter="mains">Mains</button>
+                    <button class="filter-btn" data-filter="desserts">Desserts</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <article class="menu-item" data-category="starters">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=60"
+                        alt="Grilled Vegetables">
+                    <div class="menu-body">
+                        <h3>Grilled Vegetables</h3>
+                        <p class="price">₦2,500</p>
+                        <p class="desc">Seasonal vegetables char-grilled, finished with herb butter.</p>
+                        <button class="more-btn">View</button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-category="mains">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=60"
+                        alt="Chicken Alfredo">
+                    <div class="menu-body">
+                        <h3>Chicken Alfredo</h3>
+                        <p class="price">₦5,500</p>
+                        <p class="desc">Creamy alfredo sauce, house pasta and grilled chicken.</p>
+                        <button class="more-btn">View</button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1542829370-268f5d2f1ab6?auto=format&fit=crop&w=800&q=60"
+                        alt="Chocolate Mousse">
+                    <div class="menu-body">
+                        <h3>Chocolate Mousse</h3>
+                        <p class="price">₦2,000</p>
+                        <p class="desc">Silky dark chocolate mousse with praline base.</p>
+                        <button class="more-btn">View</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX (hidden by default) -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <div class="lightbox-inner">
+                <button id="lb-close" class="lb-close" aria-label="Close">✕</button>
+                <img id="lb-image" src="" alt="">
+                <div id="lb-caption" class="lb-caption"></div>
+            </div>
+        </div>
+
+        <!-- RESERVATION -->
+        <section id="reservation" class="container reservation-section">
+            <h2>Reserve a Table</h2>
+            <form id="reservation-form" novalidate>
+                <input id="name" name="name" type="text" placeholder="Full name" required>
+                <input id="email" name="email" type="email" placeholder="Email" required>
+                <input id="phone" name="phone" type="tel" placeholder="Phone" required>
+
+                <div class="row">
+                    <input id="date" name="date" type="date" required>
+                    <input id="time" name="time" type="time" required>
+                </div>
+
+                <select id="people" name="people" required>
+                    <option value="1">1 person</option>
+                    <option value="2">2 people</option>
+                    <option value="3">3 people</option>
+                    <option value="4">4 people</option>
+                    <option value="5">5 people</option>
+                    <option value="6">6 people</option>
+                    <option value="8">8+ people</option>
+                </select>
+
+                <textarea id="requests" name="requests" rows="3"
+                    placeholder="Special requests (allergies, etc.)"></textarea>
+
+                <div class="form-actions">
+                    <button class="btn" type="submit">Request Reservation</button>
+                    <button class="btn ghost" type="button" id="save-draft">Save Draft</button>
+                </div>
+
+                <div id="res-feedback" class="feedback" aria-live="polite"></div>
+            </form>
+
+            <section class="saved-reservations">
+                <h3>Saved Reservations (local)</h3>
+                <ul id="saved-list"></ul>
+            </section>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="container about-section">
+            <h2>Our Story</h2>
+            <p>Founded with a passion for honest food and warm hospitality, The Food Place blends locally-sourced
+                ingredients with a welcoming atmosphere.</p>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1498654209832-8d2b3f8b4b3f?auto=format&fit=crop&w=800&q=60"
+                    alt="Interior">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60"
+                    alt="Dining area">
+                <img src="https://images.unsplash.com/photo-1517244683847-6f4e6d0f3f2d?auto=format&fit=crop&w=800&q=60"
+                    alt="Chef">
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <iframe title="location"
+                    src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"></iframe>
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <input id="cname" type="text" placeholder="Your name" required>
+                    <input id="cemail" type="email" placeholder="Your email" required>
+                    <textarea id="cmessage" rows="5" placeholder="Message" required></textarea>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                    <div id="contact-feedback" class="feedback" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>The Food Place</strong><br>
+                123 Harbour Road, Lagos Island<br>
+                <a href="tel:+2348001234567">+234 800 123 4567</a>
+            </div>
+            <div>© 2025 The Food Place</div>
+        </div>
     </footer>
 
-
+    <!-- Main JS (make sure file exists at js/script.js) -->
     <script src="js/script.js"></script>
 </body>
 
