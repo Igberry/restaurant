@@ -220,7 +220,6 @@ body {
 /* MENU */
 .menu-section {
     padding: 1rem 0;
-    margin: 20px;
 }
 
 .menu-header {
@@ -336,9 +335,6 @@ body {
     padding: 1rem 0
 }
 
-.reservation-section h2 {
-    margin: 20px;
-}
 #reservation-form {
     max-width: 720px;
     margin: 1rem auto;
@@ -349,10 +345,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem
-}
-
-.saved-reservations h3 {
-    margin: 30px;
 }
 
 #saved-list {
@@ -406,7 +398,6 @@ textarea {
 /* ABOUT / GALLERY */
 .about-section {
     padding: 1rem 0;
-    margin: 20px;
 }
 
 .gallery {
