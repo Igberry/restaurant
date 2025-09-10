@@ -514,6 +514,9 @@ a {
         height: auto;
     }
 
+    .menu-section {
+        margin: 20px;
+    }
     /* Forms */
     form {
         width: 90%;
@@ -521,6 +524,9 @@ a {
         padding: 1rem;
     }
 
+    #about h2 {
+        margin: 20px;
+    }
     /* Gallery */
     .gallery {
         grid-template-columns: 1fr;
