@@ -219,7 +219,7 @@ body {
 
 /* MENU */
 .menu-section {
-    padding: 1rem 0;
+    padding: 1rem 0
 }
 
 .menu-header {
@@ -335,6 +335,10 @@ body {
     padding: 1rem 0
 }
 
+.reservation-section h2 {
+    margin: 20px;
+}
+
 #reservation-form {
     max-width: 720px;
     margin: 1rem auto;
@@ -347,9 +351,6 @@ body {
     gap: 0.75rem
 }
 
-#saved-list {
-    margin: 30px;
-}
 .row {
     display: flex;
     gap: 0.6rem
@@ -397,15 +398,14 @@ textarea {
 
 /* ABOUT / GALLERY */
 .about-section {
-    padding: 1rem 0;
+    padding: 1rem 0
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
-    margin-top: 0.8rem;
-    margin: 20px;
+    margin-top: 0.8rem
 }
 
 .gallery img {
@@ -430,19 +430,50 @@ textarea {
     border-radius: 8px
 }
 
-/* FOOTER */
+/* ===== Footer ===== */
 .site-footer {
-    background: #111;
+    background: #333;
     color: #fff;
-    padding: 1rem 0;
-    margin-top: 1.2rem
+    padding: 2rem 1rem;
 }
 
 .footer-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.footer-info {
+    font-size: 0.95rem;
+}
+
+.footer-info a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0 0.6rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e67e22;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
 /* RESPONSIVE */
@@ -460,101 +491,80 @@ textarea {
     }
 }
 
-/* small visual tweaks */
-a {
-    color: inherit;
-}
-
-/* ===== Mobile View Adjustments ===== */
-@media (max-width: 768px) {
-
-    /* Navigation */
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        background: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+@media (max-width:720px) {
+    .site-nav {
         display: none;
-        padding: 1rem;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    /* Add a hamburger button */
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: #fff;
-        padding: 1rem;
-    }
-
-    /* Hero Slider */
-    .slider {
-        height: 40vh;
-    }
-
-    /* Menu items stack */
-    .menu-item {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        background: #111;
         flex-direction: column;
-        text-align: center;
+        padding: 0.8rem
     }
 
-    .menu-item img {
+    .nav-toggle {
+        display: block
+    }
+
+    .overlay {
+        max-width: 92%
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .row {
+        flex-direction: column
+    }
+
+    .gallery {
+        grid-template-columns: 1fr
+    }
+
+    .gallery img {
         width: 100%;
         height: auto;
     }
 
-    .menu-section {
-        margin: 20px;
-    }
-    /* Forms */
-    form {
-        width: 90%;
-        margin: 1rem auto;
-        padding: 1rem;
+    .highlights {
+        grid-template-columns: 1fr
     }
 
-    #about h2 {
-        margin: 20px;
-    }
-    /* Gallery */
-    .gallery {
-        grid-template-columns: 1fr;
+    .header-inner {
+        padding: 0.6rem 0.9rem
     }
 
-    /* Footer */
-    footer {
-        font-size: 0.9rem;
-        padding: 1.2rem;
+    .saved-reservations h3 {
+        margin: 20px;
+    }
+
+    #saved-list {
+        margin: 20px;
+    }
+
+    .about-section h2,
+    p {
+        margin: 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social {
+        margin: 1rem 0;
     }
 }
 
-/* ===== Smaller Devices (max 480px) ===== */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .reserve-btn a {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    nav ul {
-        padding: 0.5rem;
-    }
-
-    .slider {
-        height: 30vh;
-    }
+/* small visual tweaks */
+a {
+    color: inherit;
 }
