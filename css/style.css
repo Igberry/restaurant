@@ -515,6 +515,10 @@ textarea {
         grid-template-columns: 1fr
     }
 
+    .menu-header h2{
+        font-size: 15px;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr
     }
